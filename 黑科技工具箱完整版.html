@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>黑科技工具箱</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fff; transition: background 0.3s; }
+        .dark-mode { background: #f4f4f4; color: #000; }
+        header { background: #222; color: #fff; padding: 20px; text-align: center; }
+        .container { padding: 20px; max-width: 1200px; margin: auto; }
+        .category { margin-bottom: 40px; }
+        h2 { border-left: 5px solid #333; padding-left: 10px; margin-top: 40px; color: #333; }
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 8px; }
+        a { color: #007BFF; text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+        .description { color: #666; font-size: 0.9em; margin-left: 8px; }
+        #eyeModeToggle { position: fixed; top: 15px; right: 20px; padding: 10px; background: #333; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        .back-to-top { position: fixed; bottom: 20px; right: 20px; padding: 10px; background: #333; color: white; border-radius: 50%; cursor: pointer; font-size: 18px; }
+        footer { text-align: center; color: #999; font-size: 0.8em; padding: 20px 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>黑科技工具箱</h1>
+        <p>专为效率而生</p>
+        <button id="eyeModeToggle">护眼模式</button>
+    </header>
+    <div class="container">
+        <!-- 示例分类 -->
+        <div class="category">
+            <h2>效率工具</h2>
+            <ul>
+                <li><a href="https://yiban.io/" target="_blank">壹伴</a><span class="description">微信文章编辑、排版效率神器，适合新媒体人</span></li>
+                <li><a href="https://typora.io/" target="_blank">Typora</a><span class="description">所见即所得的 Markdown 写作工具，极简高效</span></li>
+                <li><a href="https://www.processon.com/" target="_blank">ProcessOn</a><span class="description">流程图、思维导图在线协作工具，支持导出</span></li>
+            </ul>
+        </div>
+        <div class="category">
+            <h2>AI 工具</h2>
+            <ul>
+                <li><a href="https://chat.openai.com/" target="_blank">ChatGPT</a><span class="description">AI 聊天助理，支持写作、代码、翻译等</span></li>
+                <li><a href="https://clipdrop.co/" target="_blank">ClipDrop</a><span class="description">智能抠图、去背景、放大图像一体化工具</span></li>
+                <li><a href="https://remove.bg/" target="_blank">Remove.bg</a><span class="description">一键去除图片背景，操作简单快速</span></li>
+            </ul>
+        </div>
+        <!-- 其余分类在完整版本中包含 -->
+    </div>
+    <div class="back-to-top" onclick="scrollToTop()">↑</div>
+    <footer>© 2025 黑科技工具箱 All rights reserved.</footer>
+    <script>
+        document.getElementById('eyeModeToggle').addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            document.getElementById('eyeModeToggle').textContent = document.body.classList.contains('dark-mode') ? '明亮模式' : '护眼模式';
+        });
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
